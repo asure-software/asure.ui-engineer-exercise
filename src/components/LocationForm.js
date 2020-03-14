@@ -1,16 +1,16 @@
 import React from 'react';
-import {Form, FormGroup, FormLabel, FormText, FormControl, Button} from 'react-bootstrap';
+import {Form, Button} from 'react-bootstrap';
 
 function LocationForm({handleTacoFormSubmit, handleInputChange}) {
     return (
         <Form onSubmit={handleTacoFormSubmit}>
-            <FormGroup controlId="formBasicEmail">
-                <FormLabel>Location</FormLabel>
-                <FormControl type="text" placeholder="ex: Burlington VT" onChange={handleInputChange}/>
-                <FormText className="text-muted">
+            <Form.Group controlId="location">
+                <Form.Label>Location</Form.Label>
+                <Form.Control type="text" placeholder="ex: Burlington VT" onChange={handleInputChange}/>
+                <Form.Text className="text-muted">
                 Enter a location to search for the best tacos.
-                </FormText>
-            </FormGroup>
+                </Form.Text>
+            </Form.Group>
 
             <Button variant="primary" type="submit">
                 Submit

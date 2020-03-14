@@ -6,9 +6,10 @@ import ListingGrid from './components/ListingGrid';
 
 function App() {
 
-	const [tacoData, setTacoData] = useState();
+	let [tacoData, setTacoData] = useState();
 	const [location, setLocation] = useState();
 	const [loading, setLoading] = useState(false);
+	let [sortOrder, setSortOrder] = useState('ratinghightolow');
 
 	const handleTacoFormSubmit = (e) => {
     	e.preventDefault();
@@ -22,13 +23,45 @@ function App() {
     	return response
     })
     	.then(response => response.json())
-    	.then(response => setTacoData(response))
+    	.then(response => setTacoData(sortResults(response.businesses,'rating','descending')))
     	.catch();
   	};
 
 	const handleInputChange = (e) => {
     	setLocation(e.target.value);
 	}
+
+	const sortResults = (results, facet, order) => {
+        if(order === 'ascending') {
+            return results.sort((a,b)=> a[facet] - b[facet])
+        } else {
+            return results.sort((a,b)=> a[facet] - b[facet]).reverse()
+        }
+        
+    };
+
+    const handleSortChange = (e) => {
+        switch(e.target.value) {
+            case 'Rating high to low':
+				setTacoData(sortResults(tacoData,'rating','descending'));
+				setSortOrder('ratinghightolow');
+                break;
+            case 'Rating low to high':
+				setTacoData(sortResults(tacoData,'rating','ascending'));
+				setSortOrder('ratinglowtohigh');
+                break;
+            case 'Cost low to high':
+				setTacoData(sortResults(tacoData,'cost','ascending'));
+				setSortOrder('costlowtohigh');
+                break;
+            case 'Cost high to low':
+				setTacoData(sortResults(tacoData,'cost','descending'));
+				setSortOrder('costhightolow');
+                break;
+            default:
+                break;
+          }
+    }
 
 	return (
 		<div className="App container-fliud">
@@ -42,7 +75,7 @@ function App() {
 			}{ loading &&
 				<h1 className="text-center p-5">Finding Tacos...</h1>
 			}{ tacoData &&
-				<ListingGrid businesses={tacoData.businesses}/>
+				<ListingGrid businesses={tacoData} handleSortChange={handleSortChange} sortOrder={sortOrder}/>
 			}       
 				
 		</div>

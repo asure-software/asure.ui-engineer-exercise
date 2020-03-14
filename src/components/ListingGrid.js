@@ -1,13 +1,26 @@
 import React from 'react';
 import GridItem from './GridItem';
+import { Form, Row, Col } from 'react-bootstrap';
 
-function ListingGrid({businesses}) {
-    console.log(businesses)
+function ListingGrid({businesses, handleSortChange, sortOrder}) {
     return (
         <React.Fragment>
-            <div className="row filters justify-content-center">
-                {`showing ${businesses.length} results`}
-            </div>
+            <Form>
+                <Form.Group className="px-4 pt-4" as={Row} controlId="sortOrder" style={{maxWidth: '550px'}}>
+                    <Form.Label column xs="7">
+                          {`Showing ${businesses.length} results, ordered by`}
+                    </Form.Label>
+                    <Col xs="5">
+                        <Form.Control as="select" onChange={handleSortChange}>
+                            <option>Rating high to low</option>
+                            <option>Rating low to high</option>
+                            <option>Cost high to low</option>
+                            <option>Cost low to high</option>
+                        </Form.Control>
+                    </Col>
+                </Form.Group>
+            </Form>
+            
             <div className="row listings justify-content-center p-5">
                 {businesses.map(business => {
                     return (
