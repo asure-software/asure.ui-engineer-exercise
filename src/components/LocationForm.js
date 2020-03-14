@@ -5,8 +5,8 @@ function LocationForm({handleTacoFormSubmit, handleInputChange}) {
     return (
         <Form onSubmit={handleTacoFormSubmit}>
             <FormGroup controlId="formBasicEmail">
-                <FormLabel>location</FormLabel>
-                <FormControl type="text" placeholder="ex: Burlington" onChange={handleInputChange}/>
+                <FormLabel>Location</FormLabel>
+                <FormControl type="text" placeholder="ex: Burlington VT" onChange={handleInputChange}/>
                 <FormText className="text-muted">
                 Enter a location to search for the best tacos.
                 </FormText>
