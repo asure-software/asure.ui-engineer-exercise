@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LocationForm from './components/LocationForm'
 
 function App() {
+
+  const [tacoData, setTacoData] = useState();
+  const [location, setLocation] = useState();
+
+  const handleTacoFormSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleInputChange = (e) => {
+    setLocation(e.target.value);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container-fliud">
+      <div className="row justify-content-center">
+        <div className="col col-sm-9 col-md-7 col-lg-4 p-5">
+          <LocationForm handleTacoFormSubmit={handleTacoFormSubmit} handleInputChange={handleInputChange} />
+        </div>
+      </div>
     </div>
   );
 }
