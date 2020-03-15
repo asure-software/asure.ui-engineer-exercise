@@ -5,7 +5,7 @@ function GridItem({business}) {
     const {image_url, name, rating, price, location} = business;
     return (
         <Card>
-            <Card.Img variant="top" src={image_url} style={{height:'250px', objectFit:'cover'}}/>
+            <Card.Img variant="top" src={image_url} style={{height:'250px', objectFit:'cover'}} alt="a picture of food" />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>

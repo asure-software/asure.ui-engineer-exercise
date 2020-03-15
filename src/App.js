@@ -10,6 +10,9 @@ function App() {
 	let [tacoData, setTacoData] = useState();
 	const [location, setLocation] = useState();
 	const [loading, setLoading] = useState(false);
+
+	// passing this string to ListingGrid to make it update when the array is sorted
+	// it was not updating when only the order of the items in it's array prop were changed
 	let [sortOrder, setSortOrder] = useState('ratinghightolow');
 
 	const handleTacoFormSubmit = (e) => {
@@ -44,12 +47,11 @@ function App() {
                 break;
             default:
                 break;
-          }
+        }
     }
 
 	return (
 		<div className="App container-fliud">
-			
 			{ !tacoData && !loading &&
 				<div className="row justify-content-center">
 					<div className="col col-sm-9 col-md-7 col-lg-4 p-5">
@@ -60,8 +62,7 @@ function App() {
 				<h1 className="text-center p-5">Finding Tacos...</h1>
 			}{ tacoData &&
 				<ListingGrid businesses={tacoData} handleSortChange={handleSortChange} sortOrder={sortOrder}/>
-			}       
-				
+			}       	
 		</div>
 	);
 }
