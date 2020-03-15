@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LocationForm from './components/LocationForm';
 import ListingGrid from './components/ListingGrid';
+import { sortResults, fetcher } from './assets/js/helper';
 
 function App() {
 
@@ -13,32 +14,15 @@ function App() {
 
 	const handleTacoFormSubmit = (e) => {
     	e.preventDefault();
-    	setLoading(true);
-    	fetch(`https://colorful-halibut.glitch.me/api/v1/businesses/search?location=${location}&term=tacos`)
-    	.then((response) => {
-      		if(!response.ok) {
-        	throw Error(response.statusText);
-      	}
-    	setLoading(false)
-    	return response
-    })
-    	.then(response => response.json())
-    	.then(response => setTacoData(sortResults(response.businesses,'rating','descending')))
-    	.catch();
+		const loading = (status) => setLoading(status);
+		const complete = (response) => setTacoData(sortResults(response.businesses,'rating','descending'));
+		const url = `https://colorful-halibut.glitch.me/api/v1/businesses/search?location=${location}&term=tacos`;
+		fetcher(url, loading, complete);
   	};
 
 	const handleInputChange = (e) => {
     	setLocation(e.target.value);
 	}
-
-	const sortResults = (results, facet, order) => {
-        if(order === 'ascending') {
-            return results.sort((a,b)=> a[facet] - b[facet])
-        } else {
-            return results.sort((a,b)=> a[facet] - b[facet]).reverse()
-        }
-        
-    };
 
     const handleSortChange = (e) => {
         switch(e.target.value) {
