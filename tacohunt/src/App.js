@@ -8,14 +8,18 @@ class App extends React.Component {
 		this.state = {
 			items: [],
 			isLoaded: false,
+			city: "",
 		};
+
 	}
 
-	/**
-	 * componentDidMount
-	 *
-	 * Fetch json array of objects from given url and update state.
-	 */
+	changeHandler = (event) => {
+		this.setState({
+			city: event.target.value,
+        });
+        console.log(this.state.city);
+	};
+
 	componentDidMount() {
 		fetch(
 			"https://colorful-halibut.glitch.me/api/v1/businesses/search?location=austin&term=tacos"
@@ -32,11 +36,6 @@ class App extends React.Component {
 			});
 	}
 
-	/**
-	 * render
-	 *
-	 * Render UI
-	 */
 	render() {
 		const { isLoaded, items } = this.state;
 
@@ -45,13 +44,29 @@ class App extends React.Component {
 
 		return (
 			<div className="App">
+				<header>
+					<h1>Taco Hunter</h1>
+					<form>
+						<input
+							type="email"
+							name="email"
+							value={this.state.email}
+							onChange={this.changeHandler}
+						/>
+						<button className="button" onClick={this.handleClick}>
+							Find Tacos
+						</button>
+					</form>
+				</header>
 				<div className="flex-container">
 					{items.businesses.map((item) => (
-                        <div key={item.id} className="flex-item">
-                            <img src={item.image_url} alt="taco business"></img>
-                            <span className="name">Name: {item.name}</span>
-                            <span className="rating">Rating: {item.rating}</span>
-                            <span className="price">Price: {item.price}</span>
+						<div key={item.id} className="flex-item">
+							<img src={item.image_url} alt="taco business"></img>
+							<span className="name">{item.name}</span>
+							<span className="rating">
+								Rating: {item.rating}
+							</span>
+							<span className="price">Price: {item.price}</span>
 						</div>
 					))}
 				</div>

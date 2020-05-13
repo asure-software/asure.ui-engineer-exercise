@@ -1,15 +1,19 @@
+.App {
+	font-family: "Mukta", sans-serif;
+}
+
 .flex-container {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .flex-item {
-    flex: 0 1 auto;
-    margin: 20px;
+	flex: 0 1 auto;
+	margin: 20px;
 }
 
 .name {
-	font-style: italic;
+	font-size: 24px;
 }
 
 img {
@@ -20,4 +24,19 @@ img {
 
 span {
 	display: block;
+}
+
+header {
+	width: 100vw;
+	height: 80px;
+	background-color: antiquewhite;
+	position: sticky;
+	margin: 0;
+}
+
+header h1 {
+	margin: 0;
+	padding-left: 10vw;
+	color: #149f00;
+	/* font-family: "Balsamiq Sans", cursive; */
 }
