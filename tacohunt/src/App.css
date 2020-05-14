@@ -9,7 +9,7 @@
 
 .flex-item {
 	flex: 0 1 auto;
-	margin: 20px;
+    margin: 20px;
 }
 
 .name {
@@ -31,12 +31,23 @@ header {
 	height: 80px;
 	background-color: antiquewhite;
 	position: sticky;
-	margin: 0;
+    margin: 0;
+    display: flex;
 }
 
 header h1 {
 	margin: 0;
 	padding-left: 10vw;
 	color: #149f00;
-	/* font-family: "Balsamiq Sans", cursive; */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 208px;
+    flex: 0 1 auto;
+    padding-top: 15px;
+}
+
+form {
+    flex: 0 1 auto;
+    padding-top: 28px;
+    padding-left: 20px;    
 }

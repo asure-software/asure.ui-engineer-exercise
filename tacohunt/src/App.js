@@ -18,7 +18,14 @@ class App extends React.Component {
 			city: event.target.value,
         });
         console.log(this.state.city);
-	};
+    };
+    
+    searchCity = (e) => {
+        fetch(
+            `"https://colorful-halibut.glitch.me/api/v1/businesses/search?location=${this.state.city}&term=tacos"`
+        )
+        //finish query
+    }
 
 	componentDidMount() {
 		fetch(
@@ -48,12 +55,13 @@ class App extends React.Component {
 					<h1>Taco Hunter</h1>
 					<form>
 						<input
-							type="email"
-							name="email"
-							value={this.state.email}
+							type="text"
+                            name="city"
+                            placeholder="Enter a City"
+							value={this.state.city}
 							onChange={this.changeHandler}
 						/>
-						<button className="button" onClick={this.handleClick}>
+						<button className="button" onClick={(e)=> this.searchCity(e)}>
 							Find Tacos
 						</button>
 					</form>
