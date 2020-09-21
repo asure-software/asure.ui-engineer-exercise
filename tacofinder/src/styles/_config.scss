@@ -1,5 +1,5 @@
-$background-color: #D2FDFF;
-$font-color: #303C6C;
+$background-color: #D4D3C2;
+$font-color: #303030;
 $primary-button-color: #F4976C;
 $primary-button-hover-color: darken($primary-button-color, 3%);
 $primary-button-active-color: darken($primary-button-color, 6%);
@@ -9,8 +9,12 @@ $secondary-button-active-color: darken($secondary-button-color, 6%);
 $tertiary-button-color: #FFFFFF;
 $tertiary-button-hover-color: darken($tertiary-button-color, 3%);
 $tertiary-button-active-color: darken($tertiary-button-color, 6%);
-$header-color: #FBE8A6;
+$header-color: #E2A65E;
 $border-color: #B0B0B0;
+$link-color: #809E05;
+$link-hover-color: darken($link-color, 3%);
+$link-active-color: darken($link-color, 6%);
+$panel-header-color: #F7E4CE;
 
 @mixin button {
     border-radius: 6px;

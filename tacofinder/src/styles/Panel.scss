@@ -8,13 +8,13 @@
     margin: 1em auto;
     padding: 0;
     overflow: hidden;
-}
 
-.panel__title {
-    background-color: #E0E0E0;
-    margin: 0;
-}
+    &__title {
+        background-color: $panel-header-color;
+        margin: 0;
+    }
 
-.panel__content {
-    padding: 1em;
+    &__content {
+        padding: 1em;
+    }
 }

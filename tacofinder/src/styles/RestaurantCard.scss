@@ -9,15 +9,15 @@
     flex-basis: 0;
     margin: .4rem;
     overflow: hidden;
-}
+    
+    &__image {
+        width: 100%;
+        min-width: 200px;
+        height: 120px;
+        object-fit: cover;
+    }
 
-.restaurant-card__image {
-    width: 100%;
-    min-width: 200px;
-    height: 120px;
-    object-fit: cover;
-}
-
-.restaurant-card__content {
-    padding: .4rem;
+    &__content {
+        padding: .4rem;
+    }
 }
