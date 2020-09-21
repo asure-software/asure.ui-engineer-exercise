@@ -1,15 +1,17 @@
 import React from 'react';
+import RestaurantCard from './RestaurantCard';
+import '../styles/RestaurantList.scss';
 
 class RestaurantList extends React.Component {
     render() {
         return (
-            <React.Fragment>
+            <div className="restaurant-list">
                 {this.props.restaurants.map(restaurant => {
                     return (
-                        <div key={restaurant.id}>{restaurant.name}</div>
+                        <RestaurantCard key={restaurant.id} restaurant={restaurant}/>
                     );
                 })}
-            </React.Fragment>
+            </div>
         );
     }
 }

@@ -1,7 +1,9 @@
 import React from 'react';
-import '../styles/App.css';
+import '../styles/App.scss';
 import YelpApi from '../api/YelpApi.js';
 import RestaurantList from './RestaurantList';
+import Panel from './Panel';
+import '../styles/Panel.scss';
 
 class App extends React.Component {
   state = {
@@ -36,11 +38,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
+        <header className="app-header">
           <h1>Taco Finder</h1>
         </header>
-        <RestaurantList restaurants={this.state.restaurants}/>
+        <Panel title="Restaurants!">
+          <RestaurantList restaurants={this.state.restaurants}/>
+        </Panel>
       </div>
     );
   }
