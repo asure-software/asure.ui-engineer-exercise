@@ -1,0 +1,19 @@
+@import "./config"; 
+
+.app {
+  text-align: center;
+}
+
+.app-header {
+  background-color: $header-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: $font-color;
+
+  h1 {
+    margin: .8rem;
+  }
+}

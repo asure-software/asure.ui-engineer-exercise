@@ -1,0 +1,23 @@
+@import './config';
+
+.restaurant-card {
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    min-width: 200px;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: .4rem;
+    overflow: hidden;
+    
+    &__image {
+        width: 100%;
+        min-width: 200px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: .4rem;
+    }
+}
