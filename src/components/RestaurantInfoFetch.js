@@ -2,7 +2,7 @@ import React, { useState } from "react"
 // for fetching data
 import axios from "axios"
 
-const DataFetching = () => {
+const RestaurantInfoFetch = () => {
   const [businesses, setBusinesses] = useState([])
   const [location, setLocation] = useState("")
 
@@ -26,17 +26,25 @@ const DataFetching = () => {
   }
 
   return (
-    <div>
-      <label htmlFor="location">Location</label>
-      <input
-        type="text"
-        placeholder="Location"
-        value={location}
-        // grabs the location value the user enters
-        onChange={(e) => setLocation(e.target.value)}
-      />
-      <button onClick={fetchHandler}>Find Me Tacos</button>
-<h1>HI</h1>
+    <>
+      <div className="fetch-container">
+        <div className="fetch-search-area">
+          <label htmlFor="location">Location</label>
+          <input
+            type="text"
+            placeholder="Location"
+            value={location}
+            // grabs the location value the user enters
+            onChange={(e) => setLocation(e.target.value)}
+          />
+        </div>
+        <div className="button-container">
+          <button className="button-gradient" onClick={fetchHandler}>
+            Find Me Tacos
+          </button>
+        </div>
+      </div>
+
       <div>
         {businesses.map((business) => (
           <ul key={business.id}>
@@ -59,8 +67,8 @@ const DataFetching = () => {
           </ul>
         ))}
       </div>
-    </div>
+    </>
   )
 }
 
-export default DataFetching
+export default RestaurantInfoFetch

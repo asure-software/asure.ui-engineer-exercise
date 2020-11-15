@@ -1,7 +1,11 @@
+// settings for the whole body of the app
+$bodyFont: 'Playfair Display', serif;
+
+
 li {
   list-style: none
 }
 
-h1 {
-  color: blue
+body {
+  font-family: $bodyFont;
 }
