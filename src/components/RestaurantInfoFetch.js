@@ -36,7 +36,7 @@ const DataFetching = () => {
         onChange={(e) => setLocation(e.target.value)}
       />
       <button onClick={fetchHandler}>Find Me Tacos</button>
-
+<h1>HI</h1>
       <div>
         {businesses.map((business) => (
           <ul key={business.id}>

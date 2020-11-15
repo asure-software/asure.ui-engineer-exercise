@@ -1,5 +1,5 @@
-import './App.css';
 import DataFetching from './components/RestaurantInfoFetch'
+import './App.scss'
 
 function App() {
   return (
