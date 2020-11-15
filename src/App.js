@@ -1,10 +1,9 @@
 import './App.css';
+import DataFetching from './components/RestaurantInfoFetch'
 
 function App() {
   return (
-    <div className="App">
-    
-    </div>
+    <DataFetching />
   );
 }
 
