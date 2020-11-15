@@ -3,9 +3,14 @@ $bodyFont: 'Playfair Display', serif;
 
 
 li {
-  list-style: none
+  list-style: none;
 }
 
 body {
   font-family: $bodyFont;
+}
+
+ul {
+  margin-left: 2vw;
+  margin-right: 2vw;
 }

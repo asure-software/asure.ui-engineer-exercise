@@ -28,9 +28,15 @@ const RestaurantInfoFetch = () => {
   return (
     <>
       <div className="fetch-container">
-        <div className="fetch-search-area">
-          <label htmlFor="location">Location</label>
+        <div>
+          <h1 style={{ color: "white" }}>
+            Search for the best tacos in any US city!
+          </h1>
+        </div>
+
+        <div className="location-input-container">
           <input
+            id="location-input"
             type="text"
             placeholder="Location"
             value={location}
@@ -38,6 +44,7 @@ const RestaurantInfoFetch = () => {
             onChange={(e) => setLocation(e.target.value)}
           />
         </div>
+
         <div className="button-container">
           <button className="button-gradient" onClick={fetchHandler}>
             Find Me Tacos
@@ -49,20 +56,24 @@ const RestaurantInfoFetch = () => {
         {businesses.map((business) => (
           <ul key={business.id}>
             <>
-              <li>{business.name}</li>
-              <li>{business.location.address1}</li>
-              {business.location.address2 === null ||
-              business.location.address2 === "" ? (
-                ""
-              ) : (
-                <li>{business.location.address2}</li>
-              )}
-              {business.phone === null || business.phone === "" ? (
-                ""
-              ) : (
-                <li>{business.phone}</li>
-              )}
-              <li>{business.rating} stars</li>
+              <div className="restaurant-info">
+                <div className="business-name">
+                  <li>{business.name}</li>
+                </div>
+                <li>{business.location.address1}</li>
+                {business.location.address2 === null ||
+                business.location.address2 === "" ? (
+                  ""
+                ) : (
+                  <li>{business.location.address2}</li>
+                )}
+                {business.phone === null || business.phone === "" ? (
+                  ""
+                ) : (
+                  <li>{business.phone}</li>
+                )}
+                <li>Rating: {business.rating} stars</li>
+              </div>
             </>
           </ul>
         ))}
