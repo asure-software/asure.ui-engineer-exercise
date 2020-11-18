@@ -66,23 +66,33 @@ function Search(props) {
               return (
                 <div key={restaurant.id}>
                   <div className="restaurant-info">
-                    <div className="restaurant-img">
-                      <img src={restaurant.image_url} width="200" />
+                    <div className="restaurant-img restaurant-box">
+                      <img
+                        src={restaurant.image_url}
+                        width="200"
+                        height="200"
+                      />
                     </div>
-                    <div className="restaurant-name">
-                      <h4>{restaurant.name}</h4>
+                    <div className="restaurant-name restaurant-box">
+                      <h3>{restaurant.name}</h3>
                     </div>
-                    <div className="restaurant-location">
-                      {restaurant.location.display_address}
+                    <div className="restaurant-location restaurant-box">
+                      Address:<br />
+                      {restaurant.location.display_address[0]}
+                      <br />
+                      {restaurant.location.display_address[1]}
                     </div>
-                    <div className="restaurant-phone">
+                    <div className="restaurant-phone restaurant-box">
+                      Phone:<br />
                       {restaurant.display_phone}
                     </div>
-                    <div className="restaurant-rating">
-                      Yelp Rating: {restaurant.rating}
+                    <div className="restaurant-rating restaurant-box">
+                      Yelp Rating:<br />
+                      {restaurant.rating}
                     </div>
-                    <div className="restaurant-url">
-                      Website:{" "}
+                    <div className="restaurant-url restaurant-box">
+                      Website:<br />
+                      {" "}
                       <a href={restaurant.url}>{restaurant.name}'s Yelp Page</a>
                     </div>
                   </div>

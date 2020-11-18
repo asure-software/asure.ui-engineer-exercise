@@ -6,7 +6,9 @@ function Header(props) {
         <>
         <div id="header">
             <img className="logo" src={Taco} title="Taco logo" alt="Taco logo" />
+            <img className="logo" src={Taco} title="Taco logo" alt="Taco logo" />
             <h1>Taco Tracker</h1>
+            <img className="logo" src={Taco} title="Taco logo" alt="Taco logo" />
             <img className="logo" src={Taco} title="Taco logo" alt="Taco logo" />
         </div>
         </>

@@ -4,7 +4,7 @@
   background-color: rgb(236, 100, 22);
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-content: space-around;
   height: 140px;
 }
@@ -16,7 +16,7 @@ h1 {
 .logo {
   width: 120px;
   height: 100px;
-  padding-top: 20px;
+  padding: 25px 10px;
   display: inline-block;
 }
 
@@ -41,19 +41,22 @@ h1 {
   text-align: center;
 }
 
-.restaurant-info {
-  border-style: solid;
-  padding: 10px;
-  text-align: center;
-}
-
-.restaurant-img {
-  width: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .display {
   margin-top: 20px;
 }
+
+.restaurant-info {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  border-style: solid;
+  padding: 10px;
+}
+
+.restaurant-box {
+  width: 100vw;
+  top: 50%;
+}
+
+
+
