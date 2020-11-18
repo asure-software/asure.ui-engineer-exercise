@@ -1,0 +1,59 @@
+
+/* Header CSS */
+#header {
+  background-color: rgb(236, 100, 22);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  height: 140px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.logo {
+  width: 120px;
+  height: 100px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Search Page CSS */
+
+.search-page {
+  text-align: center;
+}
+
+.restaurant-info {
+  border-style: solid;
+  padding: 10px;
+  text-align: center;
+}
+
+.restaurant-img {
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display {
+  margin-top: 20px;
+}
