@@ -1,11 +1,12 @@
 import React from 'react';
+import { LandingPage } from './LandingPage/LandingPage';
 
 
 function App() {
   return (
-    <p>Test</p>
+    <LandingPage/>
 
-  );
-}
+      );
+      }
 
-export default App;
+      export default App;
