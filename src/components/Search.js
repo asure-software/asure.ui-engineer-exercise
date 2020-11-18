@@ -44,6 +44,8 @@ function Search(props) {
     console.log(restaurants);
   };
 
+  let searchLocation = `Search results for ` + location;
+
   return (
     <div className="search-page">
       <h3>Where are you looking for tacos?: </h3>
@@ -60,38 +62,40 @@ function Search(props) {
       <br></br>
       <button onClick={sortByRating}>Re-Sort by Rating</button>
 
+      {/* This "display" div is conditionally rendered upon there being data in the restaurants state */}
+      
       <div className="display">
         {restaurants && restaurants.length > 0
-          ? restaurants.map((restaurant) => {
+          ?  restaurants.map((restaurant) => {
               return (
                 <div key={restaurant.id}>
                   <div className="restaurant-info">
                     <div className="restaurant-img restaurant-box">
                       <img
                         src={restaurant.image_url}
-                        width="200"
-                        height="200"
+                        width="100"
+                        height="100"
                       />
                     </div>
                     <div className="restaurant-name restaurant-box">
                       <h3>{restaurant.name}</h3>
                     </div>
                     <div className="restaurant-location restaurant-box">
-                      Address:<br />
+                      Address:<br /><br />
                       {restaurant.location.display_address[0]}
                       <br />
                       {restaurant.location.display_address[1]}
                     </div>
                     <div className="restaurant-phone restaurant-box">
-                      Phone:<br />
+                      Phone:<br /><br />
                       {restaurant.display_phone}
                     </div>
                     <div className="restaurant-rating restaurant-box">
-                      Yelp Rating:<br />
+                      Yelp Rating:<br /><br />
                       {restaurant.rating}
                     </div>
                     <div className="restaurant-url restaurant-box">
-                      Website:<br />
+                      Website:<br /><br />
                       {" "}
                       <a href={restaurant.url}>{restaurant.name}'s Yelp Page</a>
                     </div>
