@@ -1,4 +1,6 @@
-
+#root {
+  background-color: antiquewhite;
+}
 /* Header CSS */
 #header {
   background-color: rgb(236, 100, 22);
@@ -10,7 +12,9 @@
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 45px;
+  font-family: 'Bungee Shade';
+  color: white;
 }
 
 .logo {
@@ -51,6 +55,7 @@ h1 {
   align-items: left;
   margin: 20px;
   padding: 20px;
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
