@@ -3,7 +3,7 @@ import React from 'react'
 function Restaurants(props) {
 
     return (
-        <div key={props.id}>
+        <div>
                   <div className="restaurant-info">
                     <div className="restaurant-img restaurant-box">
                       <img

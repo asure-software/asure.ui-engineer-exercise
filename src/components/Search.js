@@ -65,7 +65,7 @@ function Search(props) {
           ? restaurants.map((restaurant) => {
               return (
                 <Restaurants 
-                  id={restaurant.id}
+                  key={restaurant.id}
                   image_url={restaurant.image_url}
                   name={restaurant.name}
                   display_address0={restaurant.location.display_address[0]}
