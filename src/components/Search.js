@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Restaurants from './Restaurants.js'
 
 function Search(props) {
   // Declare new state variables
@@ -18,7 +19,6 @@ function Search(props) {
       .then((res) => {
         restaurantArr = res.data.businesses;
         setRestaurants(restaurantArr);
-        setTimeout(() => console.log(restaurants), 1000);
       });
   };
 
@@ -64,46 +64,16 @@ function Search(props) {
         {restaurants && restaurants.length > 0
           ? restaurants.map((restaurant) => {
               return (
-                <div key={restaurant.id}>
-                  <div className="restaurant-info">
-                    <div className="restaurant-img restaurant-box">
-                      <img
-                        src={restaurant.image_url}
-                        width="100"
-                        height="100"
-                      />
-                    </div>
-                    <div className="restaurant-name restaurant-box">
-                      <h3>{restaurant.name}</h3>
-                    </div>
-                    <div className="restaurant-location restaurant-box">
-                      Address:
-                      <br />
-                      <br />
-                      {restaurant.location.display_address[0]}
-                      <br />
-                      {restaurant.location.display_address[1]}
-                    </div>
-                    <div className="restaurant-phone restaurant-box">
-                      Phone:
-                      <br />
-                      <br />
-                      {restaurant.display_phone}
-                    </div>
-                    <div className="restaurant-rating restaurant-box">
-                      Yelp Rating:
-                      <br />
-                      <br />
-                      {restaurant.rating}
-                    </div>
-                    <div className="restaurant-url restaurant-box">
-                      Website:
-                      <br />
-                      <br />{" "}
-                      <a href={restaurant.url}>{restaurant.name}'s Yelp Page</a>
-                    </div>
-                  </div>
-                </div>
+                <Restaurants 
+                  id={restaurant.id}
+                  image_url={restaurant.image_url}
+                  name={restaurant.name}
+                  display_address0={restaurant.location.display_address[0]}
+                  display_address1={restaurant.location. display_address[1]}
+                  display_phone={restaurant.display_phone}
+                  rating={restaurant.rating}
+                  url={restaurant.url}
+                />
               );
             })
           : "No Search Results Yet..."}
