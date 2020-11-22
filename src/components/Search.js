@@ -32,16 +32,13 @@ function Search(props) {
       restaurants.sort(function (a, b) {
         return parseFloat(a.rating) - parseFloat(b.rating);
       });
-      console.log(restaurants);
     }
 
     if (ratingOrder === "ascending") {
       restaurants.sort(function (a, b) {
         return parseFloat(b.rating) - parseFloat(a.rating);
       });
-      console.log(restaurants);
     }
-    console.log(restaurants);
   };
 
   let searchLocation = `Search results for ` + location;
@@ -56,17 +53,16 @@ function Search(props) {
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       />
-      <button onClick={fetchRestaurants} type="submit">
+      <button className="button" onClick={fetchRestaurants} type="submit">
         Yo Quiero Tacos!
       </button>
-      <br></br>
-      <button onClick={sortByRating}>Re-Sort by Rating</button>
+      <br></br><br></br>
+      <button className="button" onClick={sortByRating}>Re-Sort by Rating</button>
 
       {/* This "display" div is conditionally rendered upon there being data in the restaurants state */}
-      
       <div className="display">
         {restaurants && restaurants.length > 0
-          ?  restaurants.map((restaurant) => {
+          ? restaurants.map((restaurant) => {
               return (
                 <div key={restaurant.id}>
                   <div className="restaurant-info">
@@ -81,22 +77,29 @@ function Search(props) {
                       <h3>{restaurant.name}</h3>
                     </div>
                     <div className="restaurant-location restaurant-box">
-                      Address:<br /><br />
+                      Address:
+                      <br />
+                      <br />
                       {restaurant.location.display_address[0]}
                       <br />
                       {restaurant.location.display_address[1]}
                     </div>
                     <div className="restaurant-phone restaurant-box">
-                      Phone:<br /><br />
+                      Phone:
+                      <br />
+                      <br />
                       {restaurant.display_phone}
                     </div>
                     <div className="restaurant-rating restaurant-box">
-                      Yelp Rating:<br /><br />
+                      Yelp Rating:
+                      <br />
+                      <br />
                       {restaurant.rating}
                     </div>
                     <div className="restaurant-url restaurant-box">
-                      Website:<br /><br />
-                      {" "}
+                      Website:
+                      <br />
+                      <br />{" "}
                       <a href={restaurant.url}>{restaurant.name}'s Yelp Page</a>
                     </div>
                   </div>

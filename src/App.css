@@ -49,13 +49,27 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: left;
-  border-style: solid;
-  padding: 10px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .restaurant-box {
   width: 100vw;
   top: 50%;
+}
+
+.button {
+  background-color: rgb(236, 100, 22);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 
