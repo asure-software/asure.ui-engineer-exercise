@@ -5,9 +5,13 @@ import loading from "../assets/loading.gif";
 export function Results(props) {
   return (
     <article>
-      <SortButtons />
+      <SortButtons
+        setSortBy={props.setSortBy}
+        setResults={props.setResults}
+        sortBy={props.sortBy}
+      />
       <ul className="results">
-        {props.results.length === 0 ? (
+        {props.results === undefined ? (
           <div className="loading">
             <img src={loading} alt="loading with taco cat" />
             <h2>Let's taco 'bout it...' </h2>

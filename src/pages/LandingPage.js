@@ -2,7 +2,6 @@ import { useState } from "react";
 import taco from "../assets/taco.gif";
 
 export function LandingPage(props) {
-  const [location, setLocation] = useState("");
   const [showingResults, setShowingResults] = useState(false);
 
   return (
@@ -22,14 +21,14 @@ export function LandingPage(props) {
         <input
           type="text"
           placeholder="Enter a location (city/zip)"
-          value={location}
+          value={props.location}
           onChange={(event) => {
-            setLocation(event.target.value);
+            props.setLocation(event.target.value);
           }}
         />
         <button
           onClick={() => {
-            props.getResults(location);
+            props.getResults();
             setShowingResults(true);
           }}
         >
