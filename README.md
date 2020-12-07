@@ -32,4 +32,11 @@ An app that finds the best taco restaurants in your area!
 3. After the modules are all installed, run the app using `npm start`
 4. The app should be running on `http://localhost:3000/`
 
+## Some things I'd like to work on:
+
+1. Utilize React Router to make multiple pages focusing on the details of the business
+2. Make better animation
+3. Integrated map
+4. Include reviews
+
 ### Happy coding!!
