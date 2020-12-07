@@ -18,7 +18,7 @@ export function Results(props) {
           </div>
         ) : (
           props.results.map((restaurant) => (
-            <RestaurantCard restaurant={restaurant} />
+            <RestaurantCard restaurant={restaurant} key={restaurant.id} />
           ))
         )}
       </ul>
