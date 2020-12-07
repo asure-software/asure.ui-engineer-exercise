@@ -8,71 +8,7 @@ main > article:last-child {
   flex-direction: column;
   align-items: center;
 
-  nav {
-    border-bottom: 1px solid $red;
-    padding: $medium-spacer 0;
-    margin-bottom: $large-spacer;
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-    max-width: 1000px;
-  }
-
   ul {
     width: 100%;
-    li {
-      color: white;
-      border-radius: 10px;
-      padding: $medium-spacer 0;
-      margin-bottom: $large-spacer;
-      background-position: center;
-      background-size: cover;
-
-      position: relative;
-
-      .information-container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 24px;
-
-        .information {
-          background-color: $yellow;
-          padding: $small-spacer $medium-spacer;
-          border-radius: 0 10px 10px 0;
-          @include transition();
-          width: 60%;
-
-          h2,
-          h3 {
-            margin-bottom: $small-spacer;
-
-            span {
-              font-size: 0.8rem;
-            }
-          }
-
-          .more-information {
-            display: flex;
-            justify-content: space-between;
-            overflow: hidden;
-
-            a {
-              align-self: flex-end;
-              color: white;
-            }
-
-            img {
-              width: 24px;
-              height: 24px;
-            }
-          }
-        }
-      }
-
-      .rating {
-        margin: 0 $medium-spacer;
-      }
-    }
   }
 }
