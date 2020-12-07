@@ -20,7 +20,6 @@ An app that finds the best taco restaurants in your area!
 - React (Hooks)
 - React Router
 - SASS
-- Storybook
 - Yelp API
 
 ## Design Mock Up:
@@ -40,5 +39,6 @@ An app that finds the best taco restaurants in your area!
 2. Make better animation
 3. Integrated map
 4. Include reviews
+5. Incorporate Storybook
 
 ### Happy coding!!
