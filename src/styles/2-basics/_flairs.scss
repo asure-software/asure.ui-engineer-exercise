@@ -1,0 +1,44 @@
+.status {
+  padding: 0 $small-spacer 2px;
+
+  border-radius: 10px;
+}
+
+.open {
+  background-color: $green;
+}
+.closed {
+  background-color: $red;
+}
+
+.rating {
+  background-color: $red;
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.five {
+  background-color: $green;
+}
+
+.four {
+  background-color: $yellow;
+}
+
+.three {
+  background-color: $red;
+}
+
+.two {
+  background-color: $brown;
+}
+
+.one {
+  background-color: $black;
+}

@@ -1,0 +1,10 @@
+nav {
+  border-bottom: 1px solid $red;
+  padding: $medium-spacer 0;
+  margin-bottom: $large-spacer;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1000px;
+}

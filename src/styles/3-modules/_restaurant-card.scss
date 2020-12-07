@@ -1,0 +1,25 @@
+li {
+  color: white;
+  border-radius: 10px;
+  padding: $medium-spacer 0;
+  margin-bottom: $large-spacer;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+
+  .rating {
+    margin: 0 $medium-spacer;
+  }
+
+  .collapser {
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  li {
+    max-width: 400px;
+    margin: $small-spacer;
+  }
+}

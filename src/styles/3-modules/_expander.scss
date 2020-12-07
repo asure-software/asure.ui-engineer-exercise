@@ -1,0 +1,52 @@
+.collapser {
+  background-color: $yellow;
+  position: absolute;
+  width: 100%;
+
+  color: $red;
+
+  border-radius: 0 0 10px 10px;
+  box-shadow: none;
+}
+
+.collapser:hover {
+  transform: scale(1);
+
+  i {
+    transform: scale(1.2);
+  }
+}
+
+.expanded {
+  .more-information {
+    @include slightlySlowerTransition();
+    max-height: 200px;
+  }
+
+  i {
+    @include transition();
+    transform: rotate(180deg);
+  }
+}
+
+.collapsed {
+  .more-information {
+    @include slightlySlowerTransition();
+    max-height: 0px;
+  }
+
+  i {
+    @include transition();
+    transform: rotate(360deg);
+  }
+}
+
+.not-showing-search-results {
+  @include slightlySlowerTransition();
+  top: 0px;
+}
+
+.showing-search-results {
+  @include slightlySlowerTransition();
+  top: -100vh;
+}

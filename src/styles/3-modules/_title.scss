@@ -1,0 +1,37 @@
+main > article:first-child {
+  img {
+    width: 100px;
+  }
+
+  header {
+    width: 100%;
+    background-color: $red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: $medium-spacer 0;
+    margin: $large-spacer 0;
+
+    h1 {
+      color: white;
+      margin-bottom: $small-spacer;
+
+      span {
+        color: $green;
+      }
+    }
+
+    h4 {
+      color: white;
+    }
+  }
+
+  input,
+  button {
+    width: 100%;
+    max-width: 400px;
+    margin: $small-spacer;
+  }
+}
