@@ -14,7 +14,7 @@ export function Results(props) {
         {props.results === undefined ? (
           <div className="loading">
             <img src={loading} alt="loading with taco cat" />
-            <h2>Let's taco 'bout it...' </h2>
+            <h2>Let's taco 'bout it... </h2>
           </div>
         ) : (
           props.results.map((restaurant) => (
