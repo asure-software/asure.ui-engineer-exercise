@@ -23,7 +23,11 @@ export function RestaurantCard(props) {
     <li
       className={expanded ? "expanded" : "collapsed"}
       style={{
-        backgroundImage: `url(${restaurant.image_url})`,
+        backgroundImage: `url(${
+          restaurant.image_url
+            ? restaurant.image_url
+            : "https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"
+        })`,
       }}
     >
       <div className="information-container">
