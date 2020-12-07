@@ -1,0 +1,53 @@
+main > article:first-child {
+  img {
+    width: 100px;
+  }
+
+  header {
+    width: 100vw;
+    background-color: $red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: $medium-spacer;
+    margin: $large-spacer;
+
+    h1 {
+      color: white;
+      margin-bottom: $small-spacer;
+
+      span {
+        color: $green;
+      }
+    }
+
+    h4 {
+      color: white;
+    }
+  }
+
+  input,
+  button {
+    width: 100%;
+    max-width: 400px;
+    margin: $small-spacer;
+  }
+
+  footer {
+    width: 100vw;
+    margin: 0;
+
+    button {
+      background-color: $yellow;
+      box-shadow: none;
+
+      color: $red;
+
+      border-radius: 0 0 20px 20px;
+      margin: 0;
+      max-width: 100vw;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+input,
+button {
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+input[type="text"] {
+  background-color: $light-yellow;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  background-color: $red;
+  color: white;
+  @include transition();
+
+  box-shadow: 4px 4px 10px hsla(0, 0%, 0%, 0.2);
+}
+
+button:hover {
+  transform: scale(1.03);
+}

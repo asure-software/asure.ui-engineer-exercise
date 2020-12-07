@@ -6,17 +6,19 @@ function App() {
   return (
     <main>
       <article>
-        <img src={taco} alt="animation of a taco cat with legs" />
-        <header>
-          <h1>
-            Spec-<span>TACO</span>-lar Restaurants!
-          </h1>
-          <h4>in...</h4>
-        </header>
-        <input placeholder="Enter a location (city/zip)" />
-        <button>What's the taco the town?</button>
+        <div>
+          <img src={taco} alt="animation of a taco cat with legs" />
+          <header>
+            <h1>
+              Spec-<span>TACO</span>-lar Restaurants!
+            </h1>
+            <h4>in...</h4>
+          </header>
+          <input type="text" placeholder="Enter a location (city/zip)" />
+          <button>What's the taco the town?</button>
+        </div>
         <footer>
-          <button>
+          <button className="expander">
             <i className="fas fa-angle-down"></i>
           </button>
         </footer>
