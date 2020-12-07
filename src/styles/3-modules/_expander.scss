@@ -9,9 +9,17 @@
   box-shadow: none;
 }
 
+.collapser:hover {
+  transform: scale(1);
+
+  i {
+    transform: scale(1.2);
+  }
+}
+
 .expanded {
   .more-information {
-    @include slowerTransition();
+    @include slightlySlowerTransition();
     max-height: 200px;
   }
 
@@ -23,7 +31,7 @@
 
 .collapsed {
   .more-information {
-    @include slowerTransition();
+    @include slightlySlowerTransition();
     max-height: 0px;
   }
 
