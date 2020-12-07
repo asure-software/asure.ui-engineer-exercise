@@ -17,6 +17,7 @@ export function SortButtons(props) {
           props.setSortBy("rating");
           props.setResults(undefined);
         }}
+        disabled={props.sortBy === "rating"}
       >
         Best Rating
       </button>
@@ -26,6 +27,7 @@ export function SortButtons(props) {
           props.setSortBy("worst");
           props.setResults(undefined);
         }}
+        disabled={props.sortBy === "worst"}
       >
         Worst Rating
       </button>
@@ -35,6 +37,7 @@ export function SortButtons(props) {
           props.setSortBy("review_count");
           props.setResults(undefined);
         }}
+        disabled={props.sortBy === "review_count"}
       >
         Reviews
       </button>
@@ -44,6 +47,7 @@ export function SortButtons(props) {
           props.setSortBy("distance");
           props.setResults(undefined);
         }}
+        disabled={props.sortBy === "distance"}
       >
         Distance
       </button>
