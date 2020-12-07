@@ -11,6 +11,10 @@ li {
   .rating {
     margin: 0 $medium-spacer;
   }
+
+  .collapser {
+    bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1000px) {
