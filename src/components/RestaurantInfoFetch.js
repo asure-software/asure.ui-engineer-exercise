@@ -23,7 +23,7 @@ const RestaurantInfoFetch = () => {
       .catch((err) => {
         console.log(err)
       })
-  }
+    }
 
   return (
     <>
