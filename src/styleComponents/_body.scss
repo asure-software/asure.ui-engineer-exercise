@@ -1,0 +1,16 @@
+// settings for the whole body of the app
+$bodyFont: 'Playfair Display', serif;
+
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: $bodyFont;
+}
+
+ul {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
